@@ -1,6 +1,9 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-import sys, traceback, Ice, random
+import sys
+import traceback
+import Ice
+import random
 
 # Load Ice interface file
 Ice.loadSlice('RPCConection.ice')
@@ -17,6 +20,7 @@ class Server(RPCConection.TextServer):
         print("Received messaged:", text)
         return 1
 
+
 # Main procedure
 if __name__ == '__main__':
     # Object to receice RPC calls, it has to implement all functions defined in TextServer interface (RPCConnection.ice file)
@@ -26,7 +30,8 @@ if __name__ == '__main__':
         # Ice initialization
         ic = Ice.initialize(sys.argv)
         # Network name and port to be published
-        adapter = ic.createObjectAdapterWithEndpoints("RPCConection", "default -p 9000")
+        adapter = ic.createObjectAdapterWithEndpoints(
+            "RPCConection", "default -p 9000")
         # Network name
         adapter.add(object, ic.stringToIdentity("RPCServerName"))
         adapter.activate()

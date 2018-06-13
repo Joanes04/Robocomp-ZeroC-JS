@@ -27,26 +27,26 @@
     const _ModuleRegistry = Ice._ModuleRegistry;
     const Slice = Ice.Slice;
 
-    let RPCModule = _ModuleRegistry.module("RPCModule");
+    let RPCConection = _ModuleRegistry.module("RPCConection");
 
-    const iceC_RPCModule_TextServer_ids = [
+    const iceC_RPCConection_TextServer_ids = [
         "::Ice::Object",
-        "::RPCModule::TextServer"
+        "::RPCConection::TextServer"
     ];
 
-    RPCModule.TextServer = class extends Ice.Object
+    RPCConection.TextServer = class extends Ice.Object
     {
     };
 
-    RPCModule.TextServerPrx = class extends Ice.ObjectPrx
+    RPCConection.TextServerPrx = class extends Ice.ObjectPrx
     {
     };
 
-    Slice.defineOperations(RPCModule.TextServer, RPCModule.TextServerPrx, iceC_RPCModule_TextServer_ids, 1,
+    Slice.defineOperations(RPCConection.TextServer, RPCConection.TextServerPrx, iceC_RPCConection_TextServer_ids, 1,
     {
-        "printText": [, , , , [3], , , , , ]
+        "printText": [, , , , [3], [[7]], , , , ]
     });
-    exports.RPCModule = RPCModule;
+    exports.RPCConection = RPCConection;
 }
 (typeof(global) !== "undefined" && typeof(global.process) !== "undefined" ? module : undefined,
  typeof(global) !== "undefined" && typeof(global.process) !== "undefined" ? require :
