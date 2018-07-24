@@ -1,0 +1,28 @@
+{
+    "title": "RoboTest",
+    "name": "robotest",
+    "version": "4.1.1",
+    "description": "Test for robot control with ICE",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "license": "MIT",
+    "author": "Joanes04",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Joanes04/Robocomp-ZeroC-JS.git"
+    },
+    "dependencies": {
+        "bootstrap": "4.1.1",
+        "jquery": "3.3.1"
+    },
+    "devDependencies": {
+        "browser-sync": "2.24.5",
+        "gulp": "^3.9.1"
+    }
+}
