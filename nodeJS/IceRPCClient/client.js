@@ -5,9 +5,13 @@ var communicator = Ice.initialize(process.argv);
 
 var base = communicator.stringToProxy("RPCServerName:tcp -h localhost -p 9000");
 
-RPCConection.TextServerPrx.checkedCast(base).then(
+RPCConection.RobotServerPrx.checkedCast(base).then(
     function (printer) {
-        printer.printText("Hello world from JS ");
+        printer.printUp();
+        printer.printDown();
+        printer.printLeft();
+        printer.printRight();
+        printer.printSpeech('Hi robot!');
         communicator.destroy();
     }, function (error) {
         console.log(error);

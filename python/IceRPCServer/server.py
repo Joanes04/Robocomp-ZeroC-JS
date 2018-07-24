@@ -11,19 +11,35 @@ import RPCConection
 
 
 # Receive text from RPC call and shows it on prompt
-class Server(RPCConection.TextServer):
+class Server(RPCConection.RobotServer):
 
     def __init__(self):
         print ("Server initialized")
 
-    def printText(self, text, current=None):
-        print("Received messaged:", text)
+    def printUp(self, current=None):
+        print("Move Robot UP")
+        return 1
+
+    def printDown(self, current=None):
+        print("Move Robot DOWN")
+        return 1
+
+    def printLeft(self, current=None):
+        print("Move Robot LEFT")
+        return 1
+
+    def printRight(self, current=None):
+        print("Move Robot RIGHT")
+        return 1
+
+    def printSpeech(self, text, current=None):
+        print("Received new SPEECH: ", text)
         return 1
 
 
 # Main procedure
 if __name__ == '__main__':
-    # Object to receice RPC calls, it has to implement all functions defined in TextServer interface (RPCConnection.ice file)
+    # Object to receice RPC calls, it has to implement all functions defined in RobotServer interface (RPCConnection.ice file)
     object = Server()
 
     try:

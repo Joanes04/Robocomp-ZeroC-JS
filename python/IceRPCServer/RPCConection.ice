@@ -1,8 +1,12 @@
 
 module RPCConection {
 
-    interface TextServer {
-        int printText(string name);
+    interface RobotServer {
+        int printUp();
+        int printDown();
+        int printLeft();
+        int printRight();
+        int printSpeech(string name);
     };
 
 };

@@ -29,22 +29,26 @@
 
     let RPCConection = _ModuleRegistry.module("RPCConection");
 
-    const iceC_RPCConection_TextServer_ids = [
+    const iceC_RPCConection_RobotServer_ids = [
         "::Ice::Object",
-        "::RPCConection::TextServer"
+        "::RPCConection::RobotServer"
     ];
 
-    RPCConection.TextServer = class extends Ice.Object
+    RPCConection.RobotServer = class extends Ice.Object
     {
     };
 
-    RPCConection.TextServerPrx = class extends Ice.ObjectPrx
+    RPCConection.RobotServerPrx = class extends Ice.ObjectPrx
     {
     };
 
-    Slice.defineOperations(RPCConection.TextServer, RPCConection.TextServerPrx, iceC_RPCConection_TextServer_ids, 1,
+    Slice.defineOperations(RPCConection.RobotServer, RPCConection.RobotServerPrx, iceC_RPCConection_RobotServer_ids, 1,
     {
-        "printText": [, , , , [3], [[7]], , , , ]
+        "printUp": [, , , , [3], , , , , ],
+        "printDown": [, , , , [3], , , , , ],
+        "printLeft": [, , , , [3], , , , , ],
+        "printRight": [, , , , [3], , , , , ],
+        "printSpeech": [, , , , [3], [[7]], , , , ]
     });
     exports.RPCConection = RPCConection;
 }
