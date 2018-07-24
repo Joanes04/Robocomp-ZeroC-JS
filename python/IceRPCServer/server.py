@@ -47,7 +47,7 @@ if __name__ == '__main__':
         ic = Ice.initialize(sys.argv)
         # Network name and port to be published
         adapter = ic.createObjectAdapterWithEndpoints(
-            "RPCConection", "default -p 9000")
+            "RPCConection", "ws -p 9000")
         # Network name
         adapter.add(object, ic.stringToIdentity("RPCServerName"))
         adapter.activate()
