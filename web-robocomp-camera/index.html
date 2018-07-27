@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>RoboTest Camera Web</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Welcome to RoboTest</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Test for robot camera Web</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <button type="button" onclick="start();" class="btn btn-lg btn-primary arrow">Play </button>
+        <button type="button" onclick="stop();" class="btn btn-lg btn-danger arrow">Stop </button>
+      </div>
+    </div>
+
+    <div class="col-lg-12 text-center">
+      <canvas id="camera" class="camera-web" width="640" height="480"> </canvas>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.1/Ice.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.1/Glacier2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.1/IceStorm.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.1/IceGrid.js"></script>
+  <script src="./interface/CameraSimple.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

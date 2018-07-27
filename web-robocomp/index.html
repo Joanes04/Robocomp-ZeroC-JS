@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>RoboTest</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Welcome to RoboTest</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Test for robot control with ICE</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h3 class="mt-5"> Get Status </h3>
+        <button type="button" onclick="getBaseState();" class="btn btn-primary arrow">Get Base State</button>
+        <textarea class="form-control" id="status" rows="3"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h3 class="mt-5"> Control buttons </h3>
+        <button type="button" onclick="moveUp();" class="btn btn-primary arrow">Move Up</button>
+        <button type="button" onclick="moveDown();" class="btn btn-primary arrow">Move Down</button>
+        <button type="button" onclick="moveLeft();" class="btn btn-primary arrow">Move Left</button>
+        <button type="button" onclick="moveRight();" class="btn btn-primary arrow">Move Right</button>
+      </div>
+      <div class="col-lg-12 text-center">
+        <!-- <h3 class="mt-5">¡Stop!</h3> -->
+        <button type="button" onclick="stop();" class="btn btn-danger arrow">¡Stop!</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 text-center">
+        <h3 class="mt-5"> Speed Z</h3>
+        <input type="number" min="0" value="100" step="1" id="speedZ" class="form-control" placeholder="Speed Z" aria-label="speedZ"
+          aria-describedby="basic-addon1">
+      </div>
+      <div class="col-lg-4 text-center">
+        <h3 class="mt-5"> Speed X</h3>
+        <input type="number" min="0" value="100" step="1" id="speedX" class="form-control" placeholder="Speed X" aria-label="speedX"
+          aria-describedby="basic-addon1">
+      </div>
+      <div class="col-lg-4 text-center">
+        <h3 class="mt-5"> Steer</h3>
+        <input type="number" min="0" value="0" step="0.01" id="steer" class="form-control" placeholder="Steer" aria-label="steer"
+          aria-describedby="basic-addon1">
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.1/Ice.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.1/Glacier2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.1/IceStorm.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.1/IceGrid.js"></script>
+  <script src="./interface/GenericBase.js"></script>
+  <script src="./interface/OmniRobot.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
